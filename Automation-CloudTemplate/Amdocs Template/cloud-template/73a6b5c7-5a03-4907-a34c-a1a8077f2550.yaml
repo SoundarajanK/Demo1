@@ -1,0 +1,84 @@
+id: 73a6b5c7-5a03-4907-a34c-a1a8077f2550
+createdAt: '2025-01-15T08:26:43.885596Z'
+createdBy: soundarajank
+updatedAt: '2025-01-20T08:10:59.499948Z'
+updatedBy: soundarajank
+orgId: 4f460358-5d11-4939-a39a-dc42197bd87f
+projectId: bd17fdb7-5d73-4b8a-9c37-c5cd04fb85b1
+projectName: S360-Main-Project
+selfLink: /blueprint/api/blueprints/73a6b5c7-5a03-4907-a34c-a1a8077f2550
+name: Amdocs Template
+description: ''
+status: DRAFT
+content: |
+  ---
+  formatVersion: 1
+  inputs:
+    vmImage:
+      type: "string"
+      enum:
+      - "ubuntu22.04"
+      - "rhel"
+      - "windows-2019-v1"
+      - "Windows 2023"
+    vmFlavor:
+      type: "string"
+      title: "T-shirt size for your VM"
+      enum:
+      - "small(2GB/4GB)"
+      - "medium"
+      - "large"
+    datacenter:
+      type: "string"
+      enum:
+      - "management"
+      - "workload"
+    environment:
+      type: "string"
+      enum:
+      - "production"
+      - "nonprod"
+  resources:
+    Network:
+      type: "Cloud.vSphere.Network"
+      metadata:
+        layoutPosition:
+        - 0
+        - 0
+      properties:
+        networkType: "existing"
+        constraints:
+        - tag: "environment:${input.environment}"
+    Disk:
+      type: "Cloud.vSphere.Disk"
+      metadata:
+        layoutPosition:
+        - 1
+        - 0
+      properties:
+        capacityGb: 20
+    Machine:
+      type: "Cloud.vSphere.Machine"
+      metadata:
+        layoutPosition:
+        - 1
+        - 1
+      properties:
+        image: "${input.vmImage}"
+        flavor: "${input.vmFlavor}"
+        networks:
+        - network: "${resource.Network.id}"
+          assignment: "static"
+        constraints:
+        - tag: "datacenter:${input.datacenter}"
+        - tag: "environment:${input.environment}"
+        attachedDisks:
+        - source: "${resource.Disk.id}"
+valid: true
+validationMessages: [
+  ]
+totalVersions: 3
+totalReleasedVersions: 1
+requestScopeOrg: true
+contentSourceSyncMessages: [
+  ]
