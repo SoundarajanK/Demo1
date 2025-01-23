@@ -1,0 +1,7 @@
+{
+  "contentName": "Amdocs.configuration-vro",
+  "uniqueId": "Amdocs.configuration-vro",
+  "contentType": "Orchestrator-Package",
+  "keyValues": {"contentEndpointVersion": "8.x"},
+  "descendents": []
+}

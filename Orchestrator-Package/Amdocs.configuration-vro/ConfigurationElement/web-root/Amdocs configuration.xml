@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<config-element id="d6bfa38c-bfd2-4d48-a72f-3a2518f9abb2" version="0.0.0">
+  <display-name><![CDATA[Amdocs configuration]]></display-name>
+  <atts>
+    <att name="viServer" type="string" read-only="false">
+      <value encoded="n"><![CDATA[vc-l-01a.corp.local]]></value>
+    </att>
+    <att name="username" type="string" read-only="false">
+      <value encoded="n"><![CDATA[administrator@vsphere.local]]></value>
+    </att>
+    <att name="password" type="SecureString" read-only="false">
+      <value encoded="n"><![CDATA[16BM56L4DQ77X61J72M65V31Q21N56U4DS77G61Z72O65Z31W21VCE682FBH938F9B6T2643F40W5B9940DVDF508F9Y557A5AW6ED32DAJ102DCB6R6E89CABY8913123X9554B19LCC7859EJ930062AL8C9F382OBA4491JF408460X]]></value>
+    </att>
+    <att name="refreshToken" type="string" read-only="false">
+      <value encoded="n"><![CDATA["refreshToken": "J6Kx8ET6bJF4TyDqnSrXVtt1KvGuMcPN"]]></value>
+    </att>
+  </atts>
+</config-element>
