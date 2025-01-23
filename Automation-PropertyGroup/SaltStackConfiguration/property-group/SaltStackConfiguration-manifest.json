@@ -1,0 +1,7 @@
+{
+  "contentName": "SaltStackConfiguration",
+  "uniqueId": "f4d9a77b-99a5-483c-be30-64f35216e378",
+  "contentType": "Automation-PropertyGroup",
+  "keyValues": {"contentEndpointVersion": "8.x"},
+  "descendents": []
+}

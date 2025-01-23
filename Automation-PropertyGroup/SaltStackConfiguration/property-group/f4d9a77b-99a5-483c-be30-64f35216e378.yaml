@@ -1,0 +1,19 @@
+type: CONSTANT
+id: f4d9a77b-99a5-483c-be30-64f35216e378
+createdAt: '2024-12-11T20:23:12.331610Z'
+createdBy: arashr
+updatedAt: '2024-12-12T19:34:28.115367Z'
+updatedBy: arashr
+orgId: 4f460358-5d11-4939-a39a-dc42197bd87f
+name: SaltStackConfiguration
+description: ''
+properties:
+  masterAddress:
+    type: string
+    encrypted: false
+    const: vssc-l-01a.corp.local
+  masterFingerPrint:
+    type: string
+    encrypted: false
+    const: 5f:8d:e0:86:b9:65:70:a1:f5:04:2b:ae:a9:c3:0b:83:61:dc:17:ae:ab:80:dc:1b:4c:43:54:43:69:7a:1e:81
+organizationName: vidm-l-01a
